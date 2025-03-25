@@ -1,0 +1,721 @@
+session.findById("wnd[1]/usr/txtICON_POPUP_TYPE").setFocus
+session.findById("wnd[1]/usr/btnBUTTON_2").press 'Are you sure you want to change without saving? - no button
+
+is not available for business partner
+
+objWorkbook1.close
+objWorkbook2.close
+objWorkbook3.close
+objWorkbook4.close
+
+AbsoluteRow = session.FindById("wnd[0]/usr/tblSAPLZSAPSOFTSFGTCTRL_ZSAPSOFTSFG").VerticalScrollbar.Position 'get absolute row number
+session.FindById("wnd[0]/usr/tblSAPLZSAPSOFTSFGTCTRL_ZSAPSOFTSFG").GetAbsoluteRow(AbsoluteRow).Selected = True
+
+
+
+=IFS($B:$B="", "",$B:$B=(MATCH($B:$B,$D:$D,0),0)>0,"Matched PO", TRUE, "Unmatched PO"
+
+
+Sub CallAnotherMacro()
+
+Application.Run "'Another Workbook.xlsm'!StartProcessing"
+
+End Sub
+
+
+
+    'Error handler
+    Dim Err101
+  
+    Err101 = session.FindById("wnd[0]/sbar").Text
+    
+    If InStr(Err101, "is not available for business partner") > 0 Then
+    session.FindById("wnd[0]/tbar[1]/btn[6]").press 'display/change
+    End If
+
+
+
+
+april 25 1030am
+
+
+
+MsgBox variable
+Debug.Print variable
+
+Application.Wait (Now + TimeValue("0:00:02"))
+Application.Wait (Now + TimeValue("0:00:01"))
+
+Debug.Print folder
+Debug.Print template
+
+Options.ReplaceSelection = False 
+With Selection 
+ .TypeText Text:="Title" 
+ .TypeParagraph 
+End With
+
+'clears everything from row 11 below before starting the process
+With Sheets("Script")
+    .Rows(startrow2 & ":" & .Rows.Count).Delete
+End With
+
+    Do While session.findById("wnd[0]/sbar").messageType = "W"        
+    session.findById("wnd[0]").sendVKey 0 
+    Loop
+
+messagetype
+S = Success, W = Warning, E = Error, A = Abort and I = Information
+
+
+If Set_SS = "ScreenShot Enabled" Then 'SS enabler
+' DON'T EDIT or DELETE!! Always keep this line here
+objSess.FindById("wnd[0]").Iconify
+End If
+
+
+Grouping OTVA - One time vendors for auto paym has external number assignement, enter a number
+Business partner 5000000 already exists
+
+Session.FindById( to objSess.FindById(
+
+            Record = statusmessage 
+             WriteToLog VendorLog, Record
+
+Split ( Expression, [Delimiter], [Limit], [Compare] )
+tempFileName = Split(tempFileName, ".")
+
+Dim n, strPost
+dashCount = len(urlPost)-len(replace(urlPost,"-","")) 
+n=dashCount
+thisURL=split(urlPost,"-")
+strPost=replace(thisURL(n),".html","")
+response.write(strPost)
+
+otva - 5000000
+otvs - 4000000
+otve - 6000000
+
+MsgBox LogPath
+MsgBox StrLogFileName
+
+session.findById("wnd[0]/tbar[1]/btn[42]").press 'click save as completed
+
+session.findById("wnd[0]/tbar[1]/btn[9]").press 'simulate
+session.findById("wnd[0]/tbar[1]/btn[42]").press 'complete (park)
+
+Document 1900000205 4000 was parked
+
+
+
+
+Function WriteToLog(StrLogName, Record)
+
+Dim objFSO
+Dim Log
+    
+Set objFSO = CreateObject("Scripting.FileSystemObject")
+Set Log = objFSO.OpenTextFile(StrLogName, 8, True, 0) '8 is for append mode, true is to indicate to create the file if it doesn't exist
+
+With Log
+.WriteLine (Record)
+.Close
+End With
+
+End Function
+
+
+Function taxrate(ByVal Target As Range)
+    Dim cell As Range
+    Dim cellCount
+    cellCount = ThisWorkbook.Sheets("Vendor Config").UsedRange.Rows.Count
+    Range("AA4:AA" & cellCount).NumberFormat = "@"
+    
+    For Each cell In Range("AA4:AA" & cellCount)
+        cell = Format(cell, "0.00")
+    Next cell
+End Function
+
+
+
+
+'error handler for AN vendor
+Do While session.ActiveWindow.Name = "wnd[1]"
+session.findById("wnd[1]/tbar[0]/btn[0]").press 'check (pop up window)
+Loop
+
+'error handler for exceeding amount
+If session.ActiveWindow.Name = "wnd[1]" Then
+session.findById("wnd[2]/tbar[0]/btn[0]").press
+End If
+
+
+'error handler for first time opening of MIRO
+If session.ActiveWindow.Name = "wnd[1]" Then
+session.findById("wnd[1]/usr/ctxtBKPF-BUKRS").text = Cocd
+session.FindById("wnd[1]").sendVKey 0
+else
+session.FindById("wnd[0]/mbar/menu[1]/menu[0]").Select
+session.findById("wnd[1]/usr/ctxtBKPF-BUKRS").text = Cocd
+session.FindById("wnd[1]").sendVKey 0
+End If
+
+'error handler for popup window in BP
+If session.ActiveWindow.Name = "wnd[1]" Then
+session.findById("wnd[1]/usr/btnBUTTON_2").press  'select no
+End If
+
+'error handler - enter
+session.findById("wnd[0]").sendVKey 0 
+Do While session.findById("wnd[0]/sbar").messageType = "W"        
+session.findById("wnd[0]").sendVKey 0 
+Loop
+
+usedrange
+ThisWorkbook.Sheets("Template").UsedRange.Rows.Count
+
+column based count rows
+sourceusedrange16 = Workbook2.Sheets("Template").Cells(Rows.Count, 16).End(xlUp).Row
+
+'catch not existing elements
+    If Not session.findById("wnd[1]/usr/btnBUTTON_2", False) Is Nothing Then
+        session.findById("wnd[1]/usr/btnBUTTON_2").press
+    End If
+
+'catch not existing elements
+    If Not session.findById("wnd[0]/tbar[0]/btn[0]", False) Is Nothing Then
+        WScript.Sleep 1000
+    End If
+
+
+
+'close all window 1 incase it is active
+Do While session.ActiveWindow.Name = "wnd[1]"
+    If Not session.FindById("wnd[1]/usr/btnBUTTON_2", False) Is Nothing Then
+        session.FindById("wnd[1]/usr/btnBUTTON_2").press  'select no
+    Else
+        session.FindById("wnd[1]").Close
+    End If
+Loop
+
+
+
+
+
+	Do Until WSHShell.AppActivate("SAP Logon ")
+	WScript.Sleep 250
+	Loop
+
+session.Children.Count 'count windows
+
+WSHShell.AppActivate(WinTitle)
+'****************************************************************************************************
+'create random name for sap window
+Dim intMax, iLoop, k, intValue, strChar, strName, intNum
+
+' Specify the alphabet of characters to use.
+Const Chars = "abcdefghijklmnopqrstuvwxyz"
+
+' Specify length of names.
+intMax = 5
+
+' Specify number of names to generate.
+intNum = 1
+
+Randomize()
+For iLoop = 1 To intNum
+    strName = ""
+    For k = 1 To intMax
+        ' Retrieve random digit between 0 and 25 (26 possible characters).
+        intValue = Fix(26 * Rnd())
+        ' Convert to character in allowed alphabet.
+        strChar = Mid(Chars, intValue + 1, 1)
+        ' Build the name.
+        WinTitle = strName & strChar
+    Next
+
+    Wscript.Echo WinTitle
+Next
+'****************************************************************************************************
+'allow user to choose session
+If Not IsObject(application) Then
+   Set SapGuiAuto  = GetObject("SAPGUI")
+   Set application = SapGuiAuto.GetScriptingEngine
+End If
+If Not IsObject(connection) Then
+   Set connection = application.Children(0)
+End If
+Modus = int(inputbox("Please enter a session:", "SAP - Session", 1 ))
+if Modus = 0 then wscript.quit
+for session_number = 0 to connection.children.count - 1
+   Set session    = connection.Children(int(session_number))
+   if session.info.sessionnumber = Modus then exit for
+next
+if Modus > session.info.sessionnumber then wscript.quit
+'****************************************************************************************************
+
+
+
+
+
+
+
+
+
+
+
+Although answer is provided I found simpler solution:
+
+Date:
+
+01/20/2017
+By doing replace
+
+CurrentDate = replace(date, "/", "-")
+It will output:
+
+01-20-2017
+
+'current date for sap
+currentdate = day(Now) & "." & Month(Now) & "." & Year(Now)
+nextmonth = day(Now) & "." & (Month(Now)+1) & "." & Year(Now)
+
+
+Function myDateFormat(myDate)
+    Dim dd: dd = TwoDigits(Day(myDate))
+    Dim mm: mm = TwoDigits(Month(myDate))    
+    Dim yyyy: yyyy = Year(myDate)
+    myDateFormat= dd & "." & mm & "." & yyyy
+End Function
+
+Function TwoDigits(num)
+    If(Len(num)=1) Then
+        TwoDigits="0" & num
+    Else
+        TwoDigits=num
+    End If
+End Function
+
+currentdate = myDateFormat(Date)
+yesterdate = DateAdd("d", -1, Date)
+yesterdate = myDateFormat(yesterdate)
+
+
+
+'******************************************************************
+'* Function: FolderExists(FilePath)
+'* Check if a certain folder exists in a specific directory
+'******************************************************************
+Function FolderExists(FilePath)
+	Set fso = CreateObject("Scripting.FileSystemObject")
+		If fso.FolderExists(FilePath) Then
+			FolderExists = CBool(1)
+		Else
+			FolderExists = CBool(0)
+		End If
+End Function
+
+
+
+red
+ThisWorkbook.Sheets("Template").Cells(iRow, Workflowagentcol).Interior.Color = RGB(255, 0, 0)
+
+no fill
+objSheet.Range("A" & startrow & ":AU" & objSheet.UsedRange.Rows.Count).Interior.ColorIndex = 0
+
+'length from comma
+GrabString = Right(strInput, Len(strInput) - InStrRev(strInput, "_"))
+
+
+
+
+
+'******************************************************************
+'* Function: FileExists(FilePath)
+'* Check if a certain file exists in a specific directory
+'******************************************************************
+Function FileExists(FilePath)
+	Set fso = CreateObject("Scripting.FileSystemObject")
+		If fso.FileExists(FilePath) Then
+			FileExists = CBool(1)
+		Else
+			FileExists = CBool(0)
+		End If
+End Function
+
+
+
+
+'get logged in username
+Set wshShell = CreateObject("WScript.Shell")
+strUserName = wshShell.ExpandEnvironmentStrings("%USERNAME%")
+
+
+
+
+'******************************************************************
+'* Subroutine: OpenLogfile(strLogFileName)
+'*   Creates Object EventLog to add event updates AS append mode
+'******************************************************************
+Function OpenLogFile(StrLogFileName)
+'http://msdn.microsoft.com/en-us/library/5t9b5c0c(v=vs.84).aspx
+	Dim objTextFile
+	Set fso = CreateObject("Scripting.FileSystemObject")
+	Set objTextFile = fso.OpenTextFile(StrLogFileName, 8, true)
+	'8 is for append mode, true is indication to create the file if it doesn't exist
+	Set OpenLogFile = objTextFile
+End Function
+
+'******************************************************************
+'* Subroutine: CloseLogFile(ObjTextFile)
+'*   Closes file
+'******************************************************************
+Sub CloseLogFile(ObjTextFile)
+	objTextFile.Close
+	Set objTextFile = Nothing
+End Sub
+
+'******************************************************************
+'* Subroutine: WriteToLog(ObjTextFile,strEventInfo)
+'*   Closes file
+'******************************************************************
+Sub WriteToLog(Filename, strEventInfo) 
+	Dim log 
+    Set Log = OpenLogFile(FileName)
+    Log.WriteLine(strEventInfo)
+    CloseLogFile(Log)
+End Sub
+
+
+
+
+
+
+
+'******************************************************************
+'* Function: WriteToLog(Filename, Record)
+'* Create report logs in a text file
+'******************************************************************
+Function WriteToLog(Filename, Record)
+	dim filetxt
+	Const ForReading = 1, ForWriting = 2, ForAppending = 8
+	Set fso = CreateObject("Scripting.FileSystemObject")
+	Set filetxt = fso.OpenTextFile(Filename, ForAppending, True)
+	'true is indication to create the file if it doesn't exist
+	filetxt.WriteLine(Record)
+	filetxt.Close
+End Function
+
+
+
+
+
+
+TotalRows = session.FindById("wnd[0]/usr/cntlCTRL_CONTAINERBSEG/shellcont/shell").RowCount - 1    'VisibleRowCount
+
+        session.FindById("wnd[0]/usr/cntlCTRL_CONTAINERBSEG/shellcont/shell").SetCurrentCell Int(x), "BUZEI"
+        session.FindById("wnd[0]/usr/cntlCTRL_CONTAINERBSEG/shellcont/shell").selectedRows = " & Int(x) & "
+        session.FindById("wnd[0]/usr/cntlCTRL_CONTAINERBSEG/shellcont/shell").DoubleClickCurrentCell
+
+
+session.findById("wnd[1]/usr/cntlGRID/shellcont/shell").currentCellColumn = "VALUE"
+session.findById("wnd[1]/usr/cntlGRID/shellcont/shell").clearSelection
+session.findById("wnd[1]/usr/cntlGRID/shellcont/shell").contextMenu
+session.findById("wnd[1]/usr/cntlGRID/shellcont/shell").selectContextMenuItemByPosition "0" 'copy
+
+Dim ADDRNUMBER
+objSheet.Cells(i, 11).ClearContents
+objSheet.Cells(i, 11).PasteSpecial
+ADDRNUMBER = objSheet.Cells(i, 11).Value
+
+
+
+Dim lineitemnumcol
+lineitemnumcol = 1
+Do Until Not session.FindById("wnd[0]/usr/subITEMS:SAPLFSKB:0100/tblSAPLFSKBTABLE/ctxtACGL_ITEM-SGTXT[" & Int(lineitemnumcol) & "," & Int(x) & "]", False) Is Nothing
+    lineitemnumcol = lineitemnumcol + 1
+    If lineitemnumcol = 50 Then
+        Exit Do
+    End If
+Loop
+
+session.FindById("wnd[0]/usr/subITEMS:SAPLFSKB:0100/tblSAPLFSKBTABLE/ctxtACGL_ITEM-SGTXT[" & Int(lineitemnumcol) & "," & Int(x) & "]").Text = Lineitemnum
+
+
+
+
+
+
+
+conditional formatting
+
+Sub Macro1()
+'
+' Macro1 Macro
+'
+‘Define Range
+Dim MyRange As Range
+Set MyRange = Range(“A1:A10”)
+
+‘Delete Existing Conditional Formatting from Range
+MyRange.FormatConditions.Delete
+
+‘Apply Conditional Formatting
+MyRange.FormatConditions.Add Type:=xlCellValue, Operator:=xlBetween, _
+        Formula1:="=100", Formula2:="=150"
+MyRange.FormatConditions(1).Interior.Color = RGB(255, 0, 0)
+'
+  
+
+  Selection.FormatConditions.AddDatabar
+    Selection.FormatConditions(Selection.FormatConditions.Count).ShowValue = True
+    Selection.FormatConditions(Selection.FormatConditions.Count).SetFirstPriority
+    With Selection.FormatConditions(1)
+        .MinPoint.Modify newtype:=xlConditionValueNumber, newvalue:=0
+        .MaxPoint.Modify newtype:=xlConditionValueNumber, newvalue:=1
+    End With
+    With Selection.FormatConditions(1).BarColor
+        .Color = 15698432
+        .TintAndShade = 0
+    End With
+    Selection.FormatConditions(1).BarFillType = xlDataBarFillSolid
+    Selection.FormatConditions(1).Direction = xlContext
+    Selection.FormatConditions(1).NegativeBarFormat.ColorType = xlDataBarColor
+    Selection.FormatConditions(1).BarBorder.Type = xlDataBarBorderNone
+    Selection.FormatConditions(1).AxisPosition = xlDataBarAxisAutomatic
+    With Selection.FormatConditions(1).AxisColor
+        .Color = 0
+        .TintAndShade = 0
+    End With
+    With Selection.FormatConditions(1).NegativeBarFormat.Color
+        .Color = 255
+        .TintAndShade = 0
+    End With
+
+
+
+
+Do While session.ActiveWindow.Name = "wnd[1]"
+    If Not session.FindById("wnd[1]/usr/btnBUTTON_2", False) Is Nothing Then
+        'session.FindById("wnd[1]/usr/btnBUTTON_1").press 'select yes
+        session.FindById("wnd[1]/usr/btnBUTTON_2").press 'select no
+    Else
+        session.FindById("wnd[1]/tbar[0]/btn[0]").press
+    End If
+Loop
+
+Sub Get_FileName()
+    Dim mFSO As Object
+    Dim mFolder As Object
+    Dim mFile As Object
+    Dim iRow3 As Integer
+    iRow3 = 4
+    LogPath = ActiveWorkbook.Path & "\"
+    'Using FileSystemObject
+    Set mFSO = CreateObject("Scripting.FileSystemObject")
+    'Accessing file location
+    Set mFolder = mFSO.GetFolder(LogPath)
+    'Geting the file names and putting them on worksheet
+    For Each mFile In mFolder.Files
+        If LCase(Right(mFile.Name, 4)) = ".fin" Or LCase(Right(mFile.Name, 4)) = ".txt" Then
+            ThisWorkbook.Sheets("CG3Z").Cells(iRow3, 1).Value = mFile.Name
+            'Cells(j + 5, 2) = mFile.Name
+            iRow3 = iRow3 + 1
+        End If
+    Next mFile
+End Sub
+
+
+
+
+vlookup function
+
+Private Function VLookupVBA(what As Variant, lookupRng As Range, defaultValue As Variant) As Variant
+    Dim rv As Variant: rv = Application.VLookup(what, lookupRng, lookupRng.Columns.Count, False)
+    If IsError(rv) Then
+        VLookupVBA = defaultValue
+    Else
+        VLookupVBA = rv
+    End If
+End Function
+
+Public Sub UsageExample()
+    MsgBox VLookupVBA("ValueToFind", ThisWorkbook.Sheets("ReferenceSheet").Range("A:D"), "Not found!")
+End Sub
+
+
+
+
+function to check if excel is open
+
+Option Explicit
+
+Sub Sample()
+    Dim Ret
+
+    Ret = IsWorkBookOpen("C:\myWork.xlsx")
+
+    If Ret = True Then
+        MsgBox "File is open"
+    Else
+        MsgBox "File is Closed"
+    End If
+End Sub
+
+Function IsWorkBookOpen(FileName As String)
+    Dim ff As Long, ErrNo As Long
+
+    On Error Resume Next
+    ff = FreeFile()
+    Open FileName For Input Lock Read As #ff
+    Close ff
+    ErrNo = Err
+    On Error GoTo 0
+
+    Select Case ErrNo
+    Case 0:    IsWorkBookOpen = False
+    Case 70:   IsWorkBookOpen = True
+    Case Else: Error ErrNo
+    End Select
+End Function
+
+simple way:
+
+Dim location As String
+Dim wbk As Workbook
+
+location = "c:\excel.xls"
+
+Set wbk = Workbooks.Open(location)
+
+'Check to see if file is already open
+If wbk.ReadOnly Then
+  ActiveWorkbook.Close
+    MsgBox "Cannot update the excelsheet, someone currently using file. Please try again later."
+    Exit Sub
+End If
+
+
+
+check if sheet exist
+
+Dim exists As Boolean
+
+For i = 1 To Worksheets.Count
+    If Worksheets(i).Name = "MySheet" Then
+        exists = True
+    End If
+Next i
+
+If Not exists Then
+    Worksheets.Add.Name = "MySheet"
+End If
+
+
+
+
+
+
+'This function will clean all non-printing characters in a string
+Function CleanS2XL(ByVal Value As String, _
+    Optional ReplaceWith As String = " ", _
+    Optional TrimResult As Boolean = True) As String
+ 
+'List of Non-Printing Characters:
+'0 to 31 and 127, 129, 141, 143, 144, 157
+'32 and 160 are space characters
+'32 is the Space we know and love
+'And 160 is a weird space, which I will replace with 32
+ 
+Dim NonPrint() As Variant, _
+    Counter As Long
+ 
+CleanS2XL = Value
+ 
+'While the Clean function completely removes all the non-printing
+'characters, I often found that I needed to replace them with Spaces
+'Therefore, instead of using the clean function, I have replaced it with
+'the following loop to explicitly replace the first 32 non printing
+'characters, with the ReplaceWith argument.
+For Counter = 0 To 31
+    CleanS2XL = Replace(CleanS2XL, Chr(Counter), ReplaceWith)
+Next Counter
+ 
+'Now we will replace the higher value non printing characters
+NonPrint = Array(127, 129, 141, 143, 144, 157)
+For Counter = LBound(NonPrint) To UBound(NonPrint)
+    CleanS2XL = Replace(CleanS2XL, Chr(NonPrint(Counter)), ReplaceWith)
+Next Counter
+ 
+'160 is another type of space that often shows up when you are copying
+'data from web pages, PDFs and word documents. I will replace it with
+'the regular space, so the TRIM function can do its thing
+CleanS2XL = Replace(CleanS2XL, Chr(160), Chr(32))
+ 
+'I use Excel's TRIM Function here instead of VBA's because Excel's
+'function converts multiple successive spaces to a Single Space
+If TrimResult Then CleanS2XL = Application.Trim(CleanS2XL)
+ 
+End Function
+
+
+
+
+
+
+Display Calculation In Seconds
+Sub CalculateRunTime_Seconds()
+'PURPOSE: Determine how many seconds it took for code to completely run
+'SOURCE: www.TheSpreadsheetGuru.com/the-code-vault
+
+Dim StartTime As Double
+Dim SecondsElapsed As Double
+
+'Remember time when macro starts
+  StartTime = Timer
+
+'*****************************
+'Insert Your Code Here...
+'*****************************
+
+'Determine how many seconds code took to run
+  SecondsElapsed = Round(Timer - StartTime, 2)
+
+'Notify user in seconds
+  MsgBox "This code ran successfully in " & SecondsElapsed & " seconds", vbInformation
+
+End Sub
+
+
+
+
+
+
+
+
+
+Display Calculation In Minutes
+Sub CalculateRunTime_Minutes()
+'PURPOSE: Determine how many minutes it took for code to completely run
+'SOURCE: www.TheSpreadsheetGuru.com/the-code-vault
+
+Dim StartTime As Double
+Dim MinutesElapsed As String
+
+'Remember time when macro starts
+  StartTime = Timer
+
+'*****************************
+'Insert Your Code Here...
+'*****************************
+
+'Determine how many seconds code took to run
+  MinutesElapsed = Format((Timer - StartTime) / 86400, "hh:mm:ss")
+
+'Notify user in seconds
+  MsgBox "This code ran successfully in " & MinutesElapsed & " minutes", vbInformation
+
+End Sub
+
+
+
